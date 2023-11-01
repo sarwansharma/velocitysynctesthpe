@@ -6,12 +6,9 @@ update_github:
   script:
     - git config --global user.email "sarwan.sharma@hotmail.com"
     - git config --global user.name "Sarwan Sharma"
-    - pwd
-    - echo -e "protocol=https\nhost=github.com\nusername=$GITHUB_USERNAME\npassword=$GITHUB_ACCESS_TOKEN" | git credential approve
-    - git clone https://github.com/sarwansharma/velocitysynctesthpe.git
+    - git clone https://gitlab.example.com/root/velocitysynctesthpe.git
     - cd velocitysynctesthpe
-    - git remote add github https://github.com/sarwansharma/velocitysynctesthpe.git
-    - git pull github main
-    - git push github main
+    - git remote set-url --push github https://github.com/sarwansharma/velocitysynctesthpe.git
+    - git push github HEAD:main
   only:
     - main  # Adjust this to match your main branch name
