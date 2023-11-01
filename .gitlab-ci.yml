@@ -1,0 +1,15 @@
+stages:
+  - update_github
+
+update_github:
+  stage: update_github
+  script:
+    - git config --global user.email "sarwan-kumar.sharma@hpe.com"
+    - git config --global user.name "Your Name"
+    - git clone https://github.hpe.com/sarwan-kumar-sharma/velocitysynctesthpe.git
+    - cd velocitysynctesthpe
+    - git remote add github https://github.hpe.com/sarwan-kumar-sharma/velocitysynctesthpe.git
+    - git pull github main
+    - git push github main
+  only:
+    - main  # Adjust this to match your main branch name
