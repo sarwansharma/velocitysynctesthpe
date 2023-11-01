@@ -6,6 +6,8 @@ update_github:
   script:
     - git config --global user.email "sarwan.sharma@hotmail.com"
     - git config --global user.name "Sarwan Sharma"
+    - git config --global credential.helper store
+    - echo "https://github.com $GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN" | git credential reject
     - git clone https://github.com/sarwansharma/velocitysynctesthpe.git
     - cd velocitysynctesthpe
     - git remote add github https://github.com/sarwansharma/velocitysynctesthpe.git
