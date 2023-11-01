@@ -6,6 +6,7 @@ update_github:
   script:
     - git config --global user.email "sarwan.sharma@hotmail.com"
     - git config --global user.name "Sarwan Sharma"
+    - git config --global pull.rebase true  # Set your preferred strategy here
     - git clone https://gitlab.example.com/root/velocitysynctesthpe.git
     - cd velocitysynctesthpe
     - git remote add github https://github.com/sarwansharma/velocitysynctesthpe.git
