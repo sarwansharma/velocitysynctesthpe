@@ -6,6 +6,7 @@ update_github:
   script:
     - git config --global user.email "sarwan.sharma@hotmail.com"
     - git config --global user.name "Sarwan Sharma"
+    - pwd
     - echo -e "protocol=https\nhost=github.com\nusername=$GITHUB_USERNAME\npassword=$GITHUB_ACCESS_TOKEN" | git credential approve
     - git clone https://github.com/sarwansharma/velocitysynctesthpe.git
     - cd velocitysynctesthpe
