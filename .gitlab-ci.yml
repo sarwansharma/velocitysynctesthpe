@@ -8,7 +8,8 @@ update_github:
     - git config --global user.name "Sarwan Sharma"
     - git clone https://gitlab.example.com/root/velocitysynctesthpe.git
     - cd velocitysynctesthpe
-    - git remote set-url --push github https://github.com/sarwansharma/velocitysynctesthpe.git
+    - git remote add github https://github.com/sarwansharma/velocitysynctesthpe.git
+    - git pull github main
     - git push github HEAD:main
   only:
     - main  # Adjust this to match your main branch name
